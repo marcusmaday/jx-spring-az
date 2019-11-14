@@ -1,0 +1,234 @@
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-p8f49[0m
+{"level":"warn","ts":1573742831.2036643,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1573742831.2043092,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-9qhm6[0m
+{"level":"warn","ts":1573742832.3283596,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1573742832.3301194,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-marcusmaday-jx-spring-az-pr-1-s-5wp4t[0m
+{"level":"warn","ts":1573742839.3722632,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1573742839.6993842,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/***********/**-spring-az.git @ master in path /workspace/source"}
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:29778a4996c4e3abdccb922d05d99bd75a93df40,1:7bd363d5e622918a0e0ece9766c4dd5d1af23d5f
+DEBUG: ran git fetch --unshallow origin 7bd363d5e622918a0e0ece9766c4dd5d1af23d5f: 29778a4996c4e3abdccb922d05d99bd75a93df40: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 29778a4996c4e3abdccb922d05d99bd75a93df40 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 7bd363d5e622918a0e0ece9766c4dd5d1af23d5f in 
+Merged SHA 7bd363d5e622918a0e0ece9766c4dd5d1af23d5f with commit message 'Update values.yaml' into base branch master
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-set-version[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.optum.example:**-spring-az >-------------------
+[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.7:set (default-cli) @ **-spring-az ---
+[INFO] Searching for local aggregator root...
+[INFO] Local aggregation root: /workspace/source
+[INFO] Processing change of com.optum.example:**-spring-az:0.0.1-SNAPSHOT -> 0.0.0-SNAPSHOT-PR-1-1
+[INFO] Processing com.optum.example:**-spring-az
+[INFO]     Updating project com.optum.example:**-spring-az
+[INFO]         from version 0.0.1-SNAPSHOT to 0.0.0-SNAPSHOT-PR-1-1
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.256 s
+[INFO] Finished at: 2019-11-14T14:47:43Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-install[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.optum.example:**-spring-az >-------------------
+[INFO] Building demo 0.0.0-SNAPSHOT-PR-1-1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ **-spring-az ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ **-spring-az ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.3.50:compile (compile) @ **-spring-az ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ **-spring-az ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ **-spring-az ---
+[INFO] Changes detected - recompiling the module!
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.3.50:test-compile (test-compile) @ **-spring-az ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ **-spring-az ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.optum.example.**springaz.DemoApplicationTests
+14:48:22.633 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+14:48:22.677 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+14:48:22.756 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.optum.example.**springaz.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+14:48:22.782 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.optum.example.**springaz.DemoApplicationTests], using SpringBootContextLoader
+14:48:22.825 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.optum.example.**springaz.DemoApplicationTests]: class path resource [com/optum/example/**springaz/DemoApplicationTests-context.xml] does not exist
+14:48:22.826 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.optum.example.**springaz.DemoApplicationTests]: class path resource [com/optum/example/**springaz/DemoApplicationTestsContext.groovy] does not exist
+14:48:22.828 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.optum.example.**springaz.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:48:22.830 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.optum.example.**springaz.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:48:22.929 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.optum.example.**springaz.DemoApplicationTests]
+14:48:23.130 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/optum/example/**springaz/DemoApplication.class]
+14:48:23.147 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.optum.example.**springaz.DemoApplication for test class com.optum.example.**springaz.DemoApplicationTests
+14:48:23.366 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.optum.example.**springaz.DemoApplicationTests]: using defaults.
+14:48:23.368 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+14:48:23.436 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+14:48:23.447 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+14:48:23.448 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a18644, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5acf93bb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e7be63f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6cd28fa7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@614ca7df, org.springframework.test.context.event.EventPublishingTestExecutionListener@4738a206, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@66d3eec0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1e04fa0a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1af2d44a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@18d87d80, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@618425b5]
+14:48:23.457 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4f2b503c testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@bae7dc0 testClass = DemoApplicationTests, locations = '{}', classes = '{class com.optum.example.**springaz.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7adda9cc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5c909414, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@bef2d72, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@17046283], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+14:48:23.623 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2019-11-14 14:48:24.258  INFO 69 --- [           main] c.o.e.**springaz.DemoApplicationTests    : Starting DemoApplicationTests on ***********-**-spring-az-pr-1-s-1-from-build-pack-9dwjv-pod-f72 with PID 69 (started by root in /workspace/source)
+2019-11-14 14:48:24.262  INFO 69 --- [           main] c.o.e.**springaz.DemoApplicationTests    : No active profile set, falling back to default profiles: default
+2019-11-14 14:48:32.385  INFO 69 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-14 14:48:34.150  INFO 69 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-11-14 14:48:34.427  INFO 69 --- [           main] c.o.e.**springaz.DemoApplicationTests    : Started DemoApplicationTests in 10.792 seconds (JVM running for 13.577)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.998 s - in com.optum.example.**springaz.DemoApplicationTests
+2019-11-14 14:48:35.556  INFO 69 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ **-spring-az ---
+[INFO] Building jar: /workspace/source/target/**-spring-az-0.0.0-SNAPSHOT-PR-1-1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.1.RELEASE:repackage (repackage) @ **-spring-az ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ **-spring-az ---
+[INFO] Installing /workspace/source/target/**-spring-az-0.0.0-SNAPSHOT-PR-1-1.jar to /root/.mvnrepository/com/optum/example/**-spring-az/0.0.0-SNAPSHOT-PR-1-1/**-spring-az-0.0.0-SNAPSHOT-PR-1-1.jar
+[INFO] Installing /workspace/source/pom.xml to /root/.mvnrepository/com/optum/example/**-spring-az/0.0.0-SNAPSHOT-PR-1-1/**-spring-az-0.0.0-SNAPSHOT-PR-1-1.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  53.309 s
+[INFO] Finished at: 2019-11-14T14:48:40Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.0
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image openjdk:8-jdk-slim    
+2019/11/14 14:48:42 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0000] Error while retrieving image from cache: getting file info: stat /workspace/sha256:2f75fd4d652d8a4730b0e4ebbc9609e019283536e63aab95d30fb7c7f8d444fb: no such file or directory 
+[36mINFO[0m[0000] Downloading base image openjdk:8-jdk-slim    
+2019/11/14 14:48:43 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0001] Using files from context: [/workspace/source/target/**-spring-az-0.0.0-SNAPSHOT-PR-1-1.jar] 
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] ENV PORT 8080                                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0001] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] Using files from context: [/workspace/source/target/**-spring-az-0.0.0-SNAPSHOT-PR-1-1.jar] 
+[36mINFO[0m[0001] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] WORKDIR /opt                                 
+[36mINFO[0m[0001] cmd: workdir                                 
+[36mINFO[0m[0001] Changed working directory to /opt            
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] CMD ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "app.jar"] 
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+2019/11/14 14:48:44 existing blob: sha256:8d691f585fa8cec0eba196be460cfaffd69939782d6162986c3e0c5225d54f02
+2019/11/14 14:48:44 existing blob: sha256:02c32ad92c0d8181bc1743181730c576205286effbb08239f8f613acda6d4889
+2019/11/14 14:48:44 existing blob: sha256:740864fcc29dcd68c386fc2893b1fe5bf974e361523cb7cd32dd706fcfa93d82
+2019/11/14 14:48:45 pushed blob: sha256:5f3a95b53d7510eeb23532bf4d0e3ccc69cf633b76b611a36ed51194cf4499ad
+2019/11/14 14:48:45 pushed blob: sha256:b50c3996fa5e9e95492a5b32c2294b208a8d1c061a739292ecf329075797c1b8
+2019/11/14 14:48:45 existing blob: sha256:3da6fe7ff2ef0f58119eb2e8cb12c5c0b471527be95d43274b396f36fc5bbccd
+2019/11/14 14:48:45 pushed blob: sha256:6fc98b207a8546fa9320ea6d7edee1280124d97b4e829dd583602d9ffe097b76
+2019/11/14 14:48:46 thornbramble.azurecr.io/***********/**-spring-az:0.0.0-SNAPSHOT-PR-1-1: digest: sha256:e86f41a9a07bb3439281a1071da5266c5be6023f1bc2a078053f742d8c87884f size: 1245
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: thornbramble.azurecr.io\/***********\/**-spring-az|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-1-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mmarcusmaday-jx-spring-az-pr-1-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Found commit author match for: bryonwinger with email address: bryonwinger@gmail.com
+Created environment ***********-**-spring-az-pr-1
+Namespace **-***********-**-spring-az-pr-1 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 52.242.214.196.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: thornbramble.azurecr.io/***********/**-spring-az
+    tag: 0.0.0-SNAPSHOT-PR-1-1
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+
+
+Updating PipelineActivities ***********-**-spring-az-pr-1-1 which has status Running
+WARNING: preview application http://**-spring-az.**-***********-**-spring-az-pr-1.52.242.214.196.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.070673276s
+WARNING: preview application http://**-spring-az.**-***********-**-spring-az-pr-1.52.242.214.196.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.195623845s
+WARNING: preview application http://**-spring-az.**-***********-**-spring-az-pr-1.52.242.214.196.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 3.07200378s
+WARNING: preview application http://**-spring-az.**-***********-**-spring-az-pr-1.52.242.214.196.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.783022906s
+WARNING: preview application http://**-spring-az.**-***********-**-spring-az-pr-1.52.242.214.196.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 7.468410696s
+WARNING: preview application http://**-spring-az.**-***********-**-spring-az-pr-1.52.242.214.196.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 4.245822445s
+WARNING: preview application http://**-spring-az.**-***********-**-spring-az-pr-1.52.242.214.196.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 7.668923244s
+WARNING: preview application http://**-spring-az.**-***********-**-spring-az-pr-1.52.242.214.196.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 13.301532569s
+WARNING: preview application http://**-spring-az.**-***********-**-spring-az-pr-1.52.242.214.196.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 19.312418843s
+Preview application is now available at: http://**-spring-az.**-***********-**-spring-az-pr-1.52.242.214.196.nip.io
